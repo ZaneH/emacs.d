@@ -1,0 +1,13 @@
+;;; post-init.el --- Post Init -*- lexical-binding: t; -*-
+
+(add-to-list 'load-path "~/.emacs.d/")
+(load "+dashboard.el")
+(load "+theme.el")
+(load "+copilot.el")
+(load "+gptel.el")
+(load "+term.el")
+(load "+evil.el")
+(load "+projectile.el")
+(load "+helm.el")
+(load "+icons.el")
+(load "+magit.el")

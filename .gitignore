@@ -5,3 +5,4 @@
 !.github/
 !.LICENSE
 !+*.el
+!post-init.el

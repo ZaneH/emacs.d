@@ -2,15 +2,13 @@
 
 (use-package general
   :config
+  (general-evil-setup)
+  
   (general-create-definer my/leader
     :states '(normal visual emacs)
+    :keymaps 'override
     :prefix "SPC"
-    :non-normal-prefix "M-SPC")
+    :non-normal-prefix "M-SPC"))
 
-  (my/leader
-    "p"   '(:ignore t :which-key "project")
-    "pf"  '(projectile-find-file :which-key "find file")
-    "pp"  '(projectile-switch-project :which-key "switch project")
-    "g"   '(:ignore t :which-key "git")
-    "gg"  '(magit-status :which-key "magit status")
-    ))
+(my/leader
+    "fs" '(save-buffer :which-key "Safe buffer"))

@@ -1,7 +1,21 @@
 ;;; +theme.el --- Theme -*- lexical-binding: t; -*-
 
-(use-package catppuccin-theme)
-(setq catppuccin-flavor 'macchiato)
-(load-theme 'catppuccin :no-confirm)
+;; Catpuccin
+;; (use-package catppuccin-theme)
+;; (setq catppuccin-flavor 'macchiato)
+;; (load-theme 'catppuccin :no-confirm)
 
 (set-frame-font "JetBrainsMono Nerd Font 11" nil t)
+
+(use-package doom-themes
+  :ensure t
+  :custom
+  (doom-themes-enable-bold t)   ; if nil, bold is universally disabled
+  (doom-themes-enable-italic t) ; if nil, italics is universally disabled
+  (doom-themes-treemacs-theme "doom-tokyo-night") ; use "doom-colors" for less minimal icon theme
+  :config
+  (load-theme 'doom-tokyo-night :no-confirm)
+
+  (doom-themes-visual-bell-config)
+  (doom-themes-treemacs-config)
+  (doom-themes-org-config))

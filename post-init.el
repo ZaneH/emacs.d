@@ -4,6 +4,9 @@
 (setq package-check-signature nil)
 
 (add-to-list 'load-path "~/.emacs.d/")
+(load "+compile-angel.el")
+
+(load "+general.el")
 (load "+dashboard.el")
 (load "+theme.el")
 (load "+copilot.el")
@@ -16,6 +19,6 @@
 (load "+magit.el")
 (load "+hl-todo.el")
 (load "+flycheck.el")
-(load "+general.el")
 (load "+which-key.el")
 (load "+treemacs.el")
+(load "+mode-line.el")

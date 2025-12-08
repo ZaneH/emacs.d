@@ -3,6 +3,10 @@
 (use-package treemacs
   :ensure t
   :defer t
+  :config
+  ;; git path on NixOS
+  (setq treemacs-git-executable "/run/current-system/sw/bin/git")
+
   :init
   (with-eval-after-load 'winum
     (define-key winum-keymap (kbd "M-0") #'treemacs-select-window)))

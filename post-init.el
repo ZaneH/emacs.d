@@ -11,3 +11,5 @@
 (load "+helm.el")
 (load "+icons.el")
 (load "+magit.el")
+(load "+hl-todo.el")
+(load "+flycheck.el")

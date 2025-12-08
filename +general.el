@@ -10,4 +10,7 @@
   (my/leader
     "p"   '(:ignore t :which-key "project")
     "pf"  '(projectile-find-file :which-key "find file")
-    "pp"  '(projectile-switch-project :which-key "switch project")))
+    "pp"  '(projectile-switch-project :which-key "switch project")
+    "g"   '(:ignore t :which-key "git")
+    "gg"  '(magit-status :which-key "magit status")
+    ))

@@ -15,3 +15,6 @@
 (load "+flycheck.el")
 (load "+general.el")
 (load "+which-key.el")
+
+;; Probably a security issue
+(setq package-check-signature nil)

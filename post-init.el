@@ -1,5 +1,8 @@
 ;;; post-init.el --- Post Init -*- lexical-binding: t; -*-
 
+;; Probably a security issue
+(setq package-check-signature nil)
+
 (add-to-list 'load-path "~/.emacs.d/")
 (load "+dashboard.el")
 (load "+theme.el")
@@ -15,6 +18,4 @@
 (load "+flycheck.el")
 (load "+general.el")
 (load "+which-key.el")
-
-;; Probably a security issue
-(setq package-check-signature nil)
+(load "+treemacs.el")

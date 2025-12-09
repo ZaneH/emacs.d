@@ -4,12 +4,6 @@
   :config
   (add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
   (setq projectile-completion-system 'helm)
-
-  (setq projectile-project-search-path '("~/repos/personal/"
-                                         "~/repos/personal/contrib/"
-                                         "~/repos/org/roam/"
-                                         "~/repos/scrap/"
-                                         "~/repos/work/"))
   :init
   (projectile-mode +1)
 )

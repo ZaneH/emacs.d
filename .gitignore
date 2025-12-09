@@ -4,5 +4,6 @@
 !init.el
 !.github/
 !.LICENSE
-!+*.el
+!lisp/
+!lisp/+*.el
 !post-init.el

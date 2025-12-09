@@ -15,8 +15,6 @@
   :config
   (evil-collection-init))
 
-(use-package undo-tree
-  :ensure t
-  :config
-  (evil-set-undo-system 'undo-tree)
-  (global-undo-tree-mode))
+(use-package evil-mc
+  :init
+  (require 'evil-mc))

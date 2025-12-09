@@ -2,5 +2,9 @@
 
 (use-package which-key
   :config
+  (setq which-key-idle-delay 0.3
+        which-key-sort-order 'which-key-key-order-alpha)
+  (which-key-setup-side-window-bottom)
+  :init
   (which-key-mode)
-  (which-key-setup-side-window-bottom))
+  )

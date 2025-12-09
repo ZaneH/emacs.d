@@ -7,9 +7,12 @@
   ;; git path on NixOS
   (setq treemacs-git-executable "/run/current-system/sw/bin/git")
 
-  :init
-  (with-eval-after-load 'winum
-    (define-key winum-keymap (kbd "M-0") #'treemacs-select-window)))
+  (treemacs-git-mode 'deferred)
+  (treemacs-hide-gitignored-files-mode t)
+  :bind
+  (:map global-map
+        ("M-0"   . treemacs-select-window))
+)
 
 (use-package treemacs-evil
   :after (treemacs evil)

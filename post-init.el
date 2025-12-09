@@ -22,3 +22,4 @@
 (load "+which-key.el")
 (load "+treemacs.el")
 (load "+mode-line.el")
+(load "+ace-window.el")

@@ -11,6 +11,7 @@
 (load "+icons.el")
 (load "+dashboard.el")
 (load "+theme.el")
+(load "+tree-sitter.el")
 (load "+copilot.el")
 (load "+gptel.el")
 (load "+term.el")
@@ -24,6 +25,7 @@
 (load "+treemacs.el")
 (load "+mode-line.el")
 (load "+ace-window.el")
-(load "+tree-sitter.el")
+(load "+lsp.el")
+(load "+corfu.el")
 
 (load "secrets.el")

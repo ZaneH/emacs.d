@@ -12,7 +12,7 @@
   :bind
   (:map global-map
         ("M-0"   . treemacs-select-window))
-)
+  )
 
 (use-package treemacs-evil
   :after (treemacs evil)

@@ -1,7 +1,6 @@
 ;;; +corfu.el --- Corfu -*- lexical-binding: t; -*-
 
-  ;;;; Code Completion
-    ;;;; Code Completion
+;;;; Code Completion
 (use-package corfu
   :ensure t
   ;; Optional customizations

@@ -17,4 +17,5 @@
 
 (use-package evil-mc
   :init
-  (require 'evil-mc))
+  (require 'evil-mc)
+  (global-evil-mc-mode 1))

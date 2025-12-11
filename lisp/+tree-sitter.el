@@ -1,5 +1,8 @@
 ;;; +tree-sitter.el --- Parsing of languages -*- lexical-binding: t; -*-
 
+(use-package nix-ts-mode
+  :mode "\\.nix\\'")
+
 (use-package treesit
   :ensure nil
   :mode (("\\.tsx\\'" . tsx-ts-mode)
@@ -36,7 +39,8 @@
                (tsx . ("https://github.com/tree-sitter/tree-sitter-typescript" "v0.20.3" "tsx/src"))
                (typescript . ("https://github.com/tree-sitter/tree-sitter-typescript" "v0.20.3" "typescript/src"))
                (yaml . ("https://github.com/ikatyang/tree-sitter-yaml" "v0.5.0"))
-               (prisma "https://github.com/victorhqc/tree-sitter-prisma")))
+               (prisma "https://github.com/victorhqc/tree-sitter-prisma")
+               ))
       (add-to-list 'treesit-language-source-alist grammar)
       ;; Only install `grammar' if we don't already have it
       ;; installed. However, if you want to *update* a grammar then

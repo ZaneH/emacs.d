@@ -25,7 +25,11 @@
  "C-+" (lambda () (interactive) (text-scale-set 0))
  
  ;; Frame fullscreen
- "C-S-f" 'toggle-frame-fullscreen)
+ "C-S-f" 'toggle-frame-fullscreen
+
+ ;; Comment
+ "gc" 'comment-dwim
+ )
 
 ;; Minibuffer navigation
 (general-define-key
@@ -222,26 +226,25 @@
   "w<"  '(evil-window-decrease-width :which-key "Decrease width"))
 
 ;;; Evil-mc keybindings (multiple cursors)
-;; Add these when you install evil-mc
-;; (my/leader
-;;   :prefix "gz"
-;;   :states '(normal visual)
-;;   "d" '(evil-mc-make-and-goto-next-match :which-key "Next match")
-;;   "D" '(evil-mc-make-and-goto-prev-match :which-key "Prev match")
-;;   "s" '(evil-mc-skip-and-goto-next-match :which-key "Skip next")
-;;   "S" '(evil-mc-skip-and-goto-prev-match :which-key "Skip prev")
-;;   "c" '(evil-mc-skip-and-goto-next-cursor :which-key "Next cursor")
-;;   "C" '(evil-mc-skip-and-goto-prev-cursor :which-key "Prev cursor")
-;;   "j" '(evil-mc-make-cursor-move-next-line :which-key "Cursor next line")
-;;   "k" '(evil-mc-make-cursor-move-prev-line :which-key "Cursor prev line")
-;;   "m" '(evil-mc-make-all-cursors :which-key "All cursors")
-;;   "n" '(evil-mc-make-and-goto-next-cursor :which-key "Next cursor")
-;;   "N" '(evil-mc-make-and-goto-last-cursor :which-key "Last cursor")
-;;   "p" '(evil-mc-make-and-goto-prev-cursor :which-key "Prev cursor")
-;;   "P" '(evil-mc-make-and-goto-first-cursor :which-key "First cursor")
-;;   "q" '(evil-mc-undo-all-cursors :which-key "Undo all")
-;;   "u" '(evil-mc-undo-last-added-cursor :which-key "Undo last")
-;;   "z" '(evil-mc-toggle-cursor-here :which-key "Toggle here"))
+(my/leader
+  :prefix "gz"
+  :states '(normal visual)
+  "d" '(evil-mc-make-and-goto-next-match :which-key "Next match")
+  "D" '(evil-mc-make-and-goto-prev-match :which-key "Prev match")
+  "s" '(evil-mc-skip-and-goto-next-match :which-key "Skip next")
+  "S" '(evil-mc-skip-and-goto-prev-match :which-key "Skip prev")
+  "c" '(evil-mc-skip-and-goto-next-cursor :which-key "Next cursor")
+  "C" '(evil-mc-skip-and-goto-prev-cursor :which-key "Prev cursor")
+  "j" '(evil-mc-make-cursor-move-next-line :which-key "Cursor next line")
+  "k" '(evil-mc-make-cursor-move-prev-line :which-key "Cursor prev line")
+  "m" '(evil-mc-make-all-cursors :which-key "All cursors")
+  "n" '(evil-mc-make-and-goto-next-cursor :which-key "Next cursor")
+  "N" '(evil-mc-make-and-goto-last-cursor :which-key "Last cursor")
+  "p" '(evil-mc-make-and-goto-prev-cursor :which-key "Prev cursor")
+  "P" '(evil-mc-make-and-goto-first-cursor :which-key "First cursor")
+  "q" '(evil-mc-undo-all-cursors :which-key "Undo all")
+  "u" '(evil-mc-undo-last-added-cursor :which-key "Undo last")
+  "z" '(evil-mc-toggle-cursor-here :which-key "Toggle here"))
 
 ;; Alternative multiple cursor bindings in visual mode
 (general-define-key

@@ -30,5 +30,6 @@
 (load "+corfu.el")
 (load "+vundo.el")
 (load "+prettier.el")
+(load "+git-gutter.el")
 
 (load "secrets.el")

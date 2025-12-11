@@ -10,8 +10,8 @@
            typescript-ts-mode
            js-ts-mode) . lsp-deferred))
   :custom
-  (lsp-keymap-prefix "C-c l")           ; Prefix for LSP actions
-  (lsp-completion-provider :none)       ; Using Corfu as the provider
+  (lsp-keymap-prefix "C-c l")
+  (lsp-completion-provider :none)
   (lsp-diagnostics-provider :flycheck)
   (lsp-session-file (locate-user-emacs-file ".lsp-session"))
   (lsp-log-io nil)                      ; IMPORTANT! Use only for debugging! Drastically affects performance
@@ -40,7 +40,7 @@
   (lsp-enable-snippet t)                         ; Important to provide full JSX completion
   (lsp-completion-show-kind t)                   ; Optional
   ;; headerline
-  (lsp-headerline-breadcrumb-enable t)  ; Optional, I like the breadcrumbs
+  (lsp-headerline-breadcrumb-enable nil)  ; Optional, I don't like the breadcrumbs
   (lsp-headerline-breadcrumb-enable-diagnostics nil) ; Don't make them red, too noisy
   (lsp-headerline-breadcrumb-enable-symbol-numbers nil)
   (lsp-headerline-breadcrumb-icons-enable nil)
@@ -55,7 +55,6 @@
   (lsp-lens-enable nil)                 ; Optional, I don't need it
   ;; semantic
   (lsp-semantic-tokens-enable nil)      ; Related to highlighting, and we defer to treesitter
-
   :init
   (setq lsp-use-plists t))
 

@@ -23,11 +23,12 @@
 (load "+flycheck.el")
 (load "+which-key.el")
 (load "+treemacs.el")
-(load "+mode-line.el")
+(load "+modeline.el")
 (load "+ace-window.el")
 (load "+yasnippet.el")
 (load "+lsp.el")
 (load "+corfu.el")
 (load "+vundo.el")
+(load "+prettier.el")
 
 (load "secrets.el")

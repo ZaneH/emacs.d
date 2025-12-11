@@ -1,9 +1,11 @@
 ;;; +tree-sitter.el --- Parsing of languages -*- lexical-binding: t; -*-
 
 (use-package nix-ts-mode
+  :defer t
   :mode "\\.nix\\'")
 
 (use-package treesit
+  :defer t
   :ensure nil
   :mode (("\\.tsx\\'" . tsx-ts-mode)
          ("\\.js\\'"  . typescript-ts-mode)

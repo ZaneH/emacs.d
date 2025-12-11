@@ -23,12 +23,10 @@
   :ensure t)
 
 (use-package treemacs-icons-dired
+  :defer t
   :hook (dired-mode . treemacs-icons-dired-enable-once)
   :ensure t)
 
 (use-package treemacs-magit
   :after (treemacs magit)
   :ensure t)
-
-(my/leader
-  "op"  '(treemacs :which-key "Toggle treemacs"))

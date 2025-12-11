@@ -1,8 +1,10 @@
 ;;; +helm.el --- Helm -*- lexical-binding: t; -*-
 
-(use-package helm)
+(use-package helm
+  :defer t)
 
 (use-package helm-projectile
+  :defer t
   :after (helm projectile)
   :commands (helm-projectile
              helm-projectile-switch-project
@@ -15,6 +17,7 @@
   (helm-projectile-on))
 
 (use-package helm-icons
+  :defer t
   :straight '(helm-icons :type git :host github :repo "yyoncho/helm-icons")
   :config
   (setq helm-icons-provider 'all-the-icons)
@@ -22,6 +25,7 @@
   (helm-icons-enable))
 
 (use-package helm-rg
+  :defer t
   :after helm
   :commands (helm-rg)
   :config

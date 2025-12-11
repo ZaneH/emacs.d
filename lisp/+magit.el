@@ -1,11 +1,9 @@
 ;;; +magit.el --- Magit -*- lexical-binding: t; -*-
 
-(use-package magit)
+(use-package magit
+  :defer t)
 (use-package forge
+  :defer t
   :after magit)
 
 (setq auth-sources '("~/.authinfo.gpg"))
-
-(my/leader
-  "g"   '(:ignore t :which-key "git")
-  "gg"  '(magit-status :which-key "Magit status"))

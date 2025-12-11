@@ -1,6 +1,7 @@
 ;;; +copilot.el --- Copilot -*- lexical-binding: t; -*-
 
 (use-package copilot
+  :defer t
   :bind (:map copilot-completion-map
               ("<tab>" . 'copilot-accept-completion)
               ("TAB" . 'copilot-accept-completion)

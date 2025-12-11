@@ -1,6 +1,7 @@
 ;;; +hl-todo.el --- Highlight Todo -*- lexical-binding: t; -*-
 
-(use-package hl-todo)
+(use-package hl-todo
+  :defer t)
 
 ;; Enable highlighting in Magit
 (with-eval-after-load 'magit

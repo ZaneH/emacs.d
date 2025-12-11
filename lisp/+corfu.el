@@ -2,6 +2,7 @@
 
 ;;;; Code Completion
 (use-package corfu
+  :defer t
   :ensure t
   ;; Optional customizations
   :custom

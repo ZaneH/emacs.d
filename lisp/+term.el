@@ -1,9 +1,11 @@
 ;;; +term.el --- VTerm -*- lexical-binding: t; -*-
 
 (use-package vterm
+  :defer t
   :ensure t)
 
 (use-package vterm-toggle
+  :defer t
   :after (vterm)
   :config
   (setq vterm-toggle-fullscreen-p nil)
@@ -17,7 +19,3 @@
                  (reusable-frames . visible)
                  (window-height . 0.3)))
   )
-
-(my/leader
-  "o"  '(:ignore t :which-key "open")
-  "ot" '(vterm-toggle :which-key "Toggle vterm"))

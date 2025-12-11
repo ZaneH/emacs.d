@@ -30,6 +30,3 @@
   :commands (helm-rg)
   :config
   (setq helm-rg-default-directory 'git-root))
-
-(provide '+helm)
-;;; +helm.el ends here

@@ -25,6 +25,7 @@
 (load "+treemacs.el")
 (load "+mode-line.el")
 (load "+ace-window.el")
+(load "+yasnippet.el")
 (load "+lsp.el")
 (load "+corfu.el")
 (load "+vundo.el")

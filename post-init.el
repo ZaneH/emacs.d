@@ -31,5 +31,6 @@
 (load "+vundo.el")
 (load "+prettier.el")
 (load "+git-gutter.el")
+(load "+smartparens.el")
 
 (load "secrets.el")

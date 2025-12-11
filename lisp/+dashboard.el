@@ -4,9 +4,13 @@
   :ensure t
   :config
   (dashboard-setup-startup-hook)
+
   (add-hook 'server-after-make-frame-hook
             (lambda ()
-              (when (display-graphic-p)
+              (when (and (string-equal (buffer-name) "*scratch*")
+                         (not (minibufferp))
+                         (not (derived-mode-p 'magit-mode)))
+                (dashboard-open)
                 (dashboard-refresh-buffer))))
   )
 

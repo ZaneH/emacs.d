@@ -17,7 +17,7 @@
 
 (set-face-attribute 'mode-line nil :height 110)
 (set-face-attribute 'mode-line-inactive nil :height 110)
-  
+
 (use-package doom-themes
   :ensure t
   :custom
@@ -30,3 +30,9 @@
   (doom-themes-visual-bell-config)
   (doom-themes-treemacs-config)
   (doom-themes-org-config))
+
+(use-package solaire-mode
+  :straight t
+  :config
+  (require 'solaire-mode)
+  (solaire-global-mode +1))

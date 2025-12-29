@@ -32,5 +32,6 @@
 (load "+prettier.el")
 (load "+git-gutter.el")
 (load "+smartparens.el")
+(load "+minibuffer.el")
 
 (load "secrets.el")

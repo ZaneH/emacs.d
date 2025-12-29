@@ -8,7 +8,7 @@
 
 (load "+straight.el")
 (load "+icons.el")
-(load "+dashboard.el")
+;; (load "+dashboard.el")
 (load "+theme.el")
 (load "+keybindings.el")
 (load "+tree-sitter.el")

@@ -28,7 +28,7 @@
  "C-S-f" 'toggle-frame-fullscreen
 
  ;; Comment
- "gc" 'comment-dwim
+ "gcc" 'comment-line
  )
 
 ;; Minibuffer navigation

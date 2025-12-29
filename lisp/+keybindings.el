@@ -135,6 +135,9 @@
   "gll" '(magit-log :which-key "Log")
   "glr" '(magit-list-repositories :which-key "List repositories")
   "gls" '(magit-list-submodules :which-key "List submodules")
+
+  ;;; <leader> h --- help
+  "h"   '(:ignore t :which-key "help")
   
   ;;; <leader> i --- insert
   "i"   '(:ignore t :which-key "insert")

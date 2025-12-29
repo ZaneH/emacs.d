@@ -23,8 +23,7 @@
     :models '(
               google/gemini-2.5-pro
               google/gemini-2.5-flash
-              anthropic/claude-sonnet-4.5
-              )))
+              anthropic/claude-sonnet-4.5)))
 
 (use-package gptel-magit
   :ensure t

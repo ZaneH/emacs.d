@@ -162,10 +162,13 @@
   "ot"  '(vterm-toggle :which-key "Toggle terminal")
   "oT"  '(vterm :which-key "New terminal")
   "o-"  '(dired-jump :which-key "Dired")
+
+  ;;; <leader> o --- open llm
   "oll" '(gptel :which-key "Open gptel")
   "olm" '(gptel-menu :which-key "Open gptel menu")
   "ola" '(gptel-add :which-key "Add text to context")
   "olf" '(gptel-add-file :which-key "Add file to context")
+  "ols" '(gptel-send :which-key "Send to gptel")
   
   ;;; <leader> p --- project
   "p"   '(:ignore t :which-key "project")

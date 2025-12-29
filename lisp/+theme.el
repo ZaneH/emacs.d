@@ -25,7 +25,10 @@
   (doom-themes-enable-italic t) ; if nil, italics is universally disabled
   (doom-themes-treemacs-theme "doom-colors") ; use "doom-colors" for less minimal icon theme
   :config
-  (load-theme 'doom-tokyo-night :no-confirm)
+  ;; (load-theme 'doom-tokyo-night :no-confirm)
+  (load-theme 'doom-badger :no-confirm)
+  ;; (load-theme 'doom-challenger-deep :no-confirm)
+  ;; (load-theme 'doom-bluloco-dark :no-confirm)
 
   (doom-themes-visual-bell-config)
   (doom-themes-treemacs-config)

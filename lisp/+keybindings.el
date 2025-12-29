@@ -188,8 +188,6 @@
   "sp"  '(helm-projectile-ag :which-key "Search project")
   "sP"  '(helm-rg :which-key "Search with ripgrep")
   "sd"  '(helm-do-grep-ag :which-key "Search directory")
-  "si"  '(helm-imenu :which-key "Jump to symbol")
-  "sI"  '(helm-imenu-in-all-buffers :which-key "Symbols in all buffers")
   "sm"  '(bookmark-jump :which-key "Jump to bookmark")
   "sM"  '(bookmark-set :which-key "Set bookmark")
   "sj"  '(evil-show-jumps :which-key "Jump list")

@@ -141,8 +141,7 @@
   "if"  '(insert-file :which-key "Insert file")
   "ir"  '(evil-show-registers :which-key "From register")
   "iy"  '(yank-pop :which-key "From kill ring")
-  ;; TODO: Add when yasnippet is configured:
-  ;; "is"  '(yas-insert-snippet :which-key "Snippet")
+  "is"  '(yas-insert-snippet :which-key "Snippet")
   
   ;;; <leader> o --- open
   "o"   '(:ignore t :which-key "open")
@@ -151,6 +150,10 @@
   "ot"  '(vterm-toggle :which-key "Toggle terminal")
   "oT"  '(vterm :which-key "New terminal")
   "o-"  '(dired-jump :which-key "Dired")
+  "oll" '(gptel :which-key "Open gptel")
+  "olm" '(gptel-menu :which-key "Open gptel menu")
+  "ola" '(gptel-add :which-key "Add text to context")
+  "olf" '(gptel-add-file :which-key "Add file to context")
   
   ;;; <leader> p --- project
   "p"   '(:ignore t :which-key "project")

@@ -145,6 +145,15 @@
   "ir"  '(evil-show-registers :which-key "From register")
   "iy"  '(yank-pop :which-key "From kill ring")
   "is"  '(yas-insert-snippet :which-key "Snippet")
+
+  ;;; <leader> & --- snippets
+  "&"    '(:ignore t :which-key "snippets")
+  "&n"   '(yas-new-snippet :which-key "New snippet")
+  "&i"   '(yas-insert-snippet :which-key "Snippet")
+  "&/"   '(yas-visit-snippet-file :which-key "Find global snippet")
+  "&r"   '(yas-reload-all :which-key "Reload snippets")
+  "&c"   '(aya-create :which-key "Create Temp Template")
+  "&e"   '(aya-expand :which-key "Use Temp Template")
   
   ;;; <leader> o --- open
   "o"   '(:ignore t :which-key "open")
@@ -184,7 +193,6 @@
   "qr"  '(restart-emacs :which-key "Restart Emacs")
   
   ;;; <leader> s --- search
-  ;;; TODO: Improve these
   "s"   '(:ignore t :which-key "search")
   "sb"  '(helm-occur :which-key "Search buffer")
   "ss"  '(helm-occur :which-key "Search buffer")

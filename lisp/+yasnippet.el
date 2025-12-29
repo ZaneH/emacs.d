@@ -19,3 +19,7 @@
   :after yasnippet
   :config
   (yasnippet-snippets-initialize))
+
+(use-package auto-yasnippet
+  :defer t
+  :after yasnippet)

@@ -33,5 +33,4 @@
 (load "+git-gutter.el")
 (load "+smartparens.el")
 (load "+minibuffer.el")
-
-(load "secrets.el")
+(load "+dired.el")

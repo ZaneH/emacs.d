@@ -1,6 +1,7 @@
 ;;; +flycheck.el --- Flycheck Syntax Checker -*- lexical-binding: t; -*-
 
 (use-package flycheck
+  :straight t
   :defer t
   :ensure t
   :config

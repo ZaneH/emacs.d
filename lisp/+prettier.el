@@ -1,6 +1,7 @@
 ;;; +prettier.el --- Prettier -*- lexical-binding: t; -*-
 
 (use-package prettier-js
+  :straight t
   :defer t
   :config
   (setq prettier-js-command "prettierd")

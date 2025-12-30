@@ -6,7 +6,6 @@
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (load "+compile-angel.el")
 
-(load "+straight.el")
 (load "+icons.el")
 ;; (load "+dashboard.el")
 (load "+theme.el")
@@ -34,3 +33,5 @@
 (load "+smartparens.el")
 (load "+minibuffer.el")
 (load "+dired.el")
+
+(load "secrets.el")

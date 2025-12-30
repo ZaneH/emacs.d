@@ -47,8 +47,6 @@
 ;;; package.el
 
 (when (bound-and-true-p minimal-emacs-package-initialize-and-refresh)
-  ;; Initialize and refresh package contents again if needed
-  (package-initialize)
   ;; Install use-package if necessary
   (unless (package-installed-p 'use-package)
     (unless (seq-empty-p package-archive-contents)

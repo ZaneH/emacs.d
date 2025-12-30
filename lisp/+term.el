@@ -1,10 +1,12 @@
 ;;; +term.el --- VTerm -*- lexical-binding: t; -*-
 
 (use-package vterm
+  :straight t
   :defer t
   :ensure t)
 
 (use-package vterm-toggle
+  :straight t
   :defer t
   :after (vterm)
   :config

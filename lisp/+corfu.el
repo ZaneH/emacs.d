@@ -2,6 +2,7 @@
 
 ;;;; Code Completion
 (use-package corfu
+  :straight t
   :defer t
   :ensure t
   ;; Optional customizations
@@ -27,5 +28,4 @@
   :init
   (global-corfu-mode)
   (corfu-history-mode)
-  (corfu-popupinfo-mode) ; Popup completion info
-)
+  (corfu-popupinfo-mode)) ; Popup completion info

@@ -1,6 +1,7 @@
 ;;; +dashboard.el --- Dashboard -*- lexical-binding: t; -*-
 
 (use-package dashboard
+  :straight t
   :ensure t
   :config
   (dashboard-setup-startup-hook)
@@ -11,8 +12,7 @@
                          (not (minibufferp))
                          (not (derived-mode-p 'magit-mode)))
                 (dashboard-open)
-                (dashboard-refresh-buffer))))
-  )
+                (dashboard-refresh-buffer)))))
 
 (setq dashboard-center-content t)
 (setq dashboard-vertically-center-content t)

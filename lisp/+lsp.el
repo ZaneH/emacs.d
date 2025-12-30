@@ -1,6 +1,7 @@
 ;;; +lsp.el --- Language Server Protocol -*- lexical-binding: t; -*-
 
 (use-package lsp-mode
+  :straight t
   :defer t
   :diminish "LSP"
   :ensure t
@@ -59,10 +60,12 @@
   (setq lsp-use-plists t))
 
 (use-package lsp-treemacs
+  :straight t
   :defer t
   :after lsp)
 
 (use-package lsp-ui
+  :straight t
   :defer t
   :ensure t
   :commands

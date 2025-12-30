@@ -1,6 +1,7 @@
 ;;; +copilot.el --- Copilot -*- lexical-binding: t; -*-
 
 (use-package copilot
+  :straight t
   :defer t
   :bind (:map copilot-completion-map
               ("<tab>" . 'copilot-accept-completion)
@@ -12,5 +13,4 @@
   (add-to-list 'copilot-indentation-alist '(org-mode 2))
   (add-to-list 'copilot-indentation-alist '(text-mode 2))
   (add-to-list 'copilot-indentation-alist '(closure-mode 2))
-  (add-to-list 'copilot-indentation-alist '(emacs-lisp-mode 2))
-  )
+  (add-to-list 'copilot-indentation-alist '(emacs-lisp-mode 2)))

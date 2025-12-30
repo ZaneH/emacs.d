@@ -1,6 +1,7 @@
 ;;; +compile-angel.el --- Compile Angel: Improve Load Times -*- lexical-binding: t; -*-
 
 (use-package compile-angel
+  :straight t
   :ensure t
   :demand t
   :config

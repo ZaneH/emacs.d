@@ -1,6 +1,7 @@
 ;;; +gptel.el --- GPTel -*- lexical-binding: t; -*-
 
 (use-package gptel
+  :straight t
   :defer t
   :config
   ;; Default GPTel model and backend
@@ -26,6 +27,7 @@
               anthropic/claude-sonnet-4.5)))
 
 (use-package gptel-magit
+  :straight t
   :ensure t
   :defer t
   :hook (magit-mode . gptel-magit-install))

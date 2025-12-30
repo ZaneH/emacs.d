@@ -5,6 +5,7 @@
 
 ;;; General.el setup
 (use-package general
+  :straight t
   :demand t
   :config
   (general-create-definer my/leader

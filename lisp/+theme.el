@@ -19,6 +19,7 @@
 (set-face-attribute 'mode-line-inactive nil :height 110)
 
 (use-package doom-themes
+  :straight t
   :ensure t
   :custom
   (doom-themes-enable-bold t)   ; if nil, bold is universally disabled

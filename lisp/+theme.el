@@ -20,7 +20,6 @@
 
 (use-package doom-themes
   :straight t
-  :ensure t
   :custom
   (doom-themes-enable-bold t)   ; if nil, bold is universally disabled
   (doom-themes-enable-italic t) ; if nil, italics is universally disabled

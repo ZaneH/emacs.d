@@ -2,7 +2,6 @@
 
 (use-package compile-angel
   :straight t
-  :ensure t
   :demand t
   :config
   (setq compile-angel-verbose t)

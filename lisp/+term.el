@@ -2,8 +2,7 @@
 
 (use-package vterm
   :straight t
-  :defer t
-  :ensure t)
+  :defer t)
 
 (use-package vterm-toggle
   :straight t
@@ -19,5 +18,4 @@
                            (string-prefix-p vterm-buffer-name (buffer-name buffer))))))
                  (display-buffer-reuse-window display-buffer-at-bottom)
                  (reusable-frames . visible)
-                 (window-height . 0.3)))
-  )
+                 (window-height . 0.3))))

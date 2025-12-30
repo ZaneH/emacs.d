@@ -4,7 +4,6 @@
   :straight t
   :defer t
   :diminish "LSP"
-  :ensure t
   :hook ((lsp-mode . lsp-diagnostics-mode)
          (lsp-mode . lsp-enable-which-key-integration)
          ((tsx-ts-mode
@@ -67,7 +66,6 @@
 (use-package lsp-ui
   :straight t
   :defer t
-  :ensure t
   :commands
   (lsp-ui-doc-show
    lsp-ui-doc-glance)

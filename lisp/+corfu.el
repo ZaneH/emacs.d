@@ -4,7 +4,6 @@
 (use-package corfu
   :straight t
   :defer t
-  :ensure t
   ;; Optional customizations
   :custom
   (corfu-cycle t)                 ; Allows cycling through candidates

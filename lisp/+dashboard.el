@@ -2,7 +2,6 @@
 
 (use-package dashboard
   :straight t
-  :ensure t
   :config
   (dashboard-setup-startup-hook)
 

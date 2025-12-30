@@ -2,7 +2,6 @@
 
 (use-package treemacs
   :straight t
-  :ensure t
   :defer t
   :config
   ;; git path on NixOS
@@ -36,15 +35,12 @@
 
 (use-package treemacs-evil
   :straight t
-  :after (treemacs evil)
-  :ensure t)
+  :after (treemacs evil))
 
 (use-package treemacs-projectile
   :straight t
-  :after (treemacs projectile)
-  :ensure t)
+  :after (treemacs projectile))
 
 (use-package treemacs-magit
   :straight t
-  :after (treemacs magit)
-  :ensure t)
+  :after (treemacs magit))

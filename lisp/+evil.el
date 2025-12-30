@@ -2,7 +2,6 @@
 
 (use-package evil
   :straight t
-  :ensure t
   :init
   (setq evil-want-C-u-scroll t)
   (setq evil-want-integration t)
@@ -13,7 +12,6 @@
 (use-package evil-collection
   :straight t
   :after evil
-  :ensure t
   :config
   (evil-collection-init))
 

@@ -3,7 +3,6 @@
 (use-package flycheck
   :straight t
   :defer t
-  :ensure t
   :config
   (add-hook 'after-init-hook #'global-flycheck-mode)
   :bind (:map flycheck-mode-map

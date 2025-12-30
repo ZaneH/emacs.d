@@ -28,6 +28,5 @@
 
 (use-package gptel-magit
   :straight t
-  :ensure t
   :defer t
   :hook (magit-mode . gptel-magit-install))

@@ -7,3 +7,4 @@
 !lisp/
 !lisp/+*.el
 !post-init.el
+!screenshot.png

@@ -182,6 +182,7 @@
   "ot"  '(vterm-toggle :which-key "Toggle terminal")
   "oT"  '(vterm :which-key "New terminal")
   "o-"  '(dired-jump :which-key "Dired")
+  "oD"   '(docker :which-key "Docker")
 
   ;;; <leader> o --- open llm
   "oll" '(gptel :which-key "Open gptel")
@@ -237,6 +238,14 @@
   "tw"  '(visual-line-mode :which-key "Wrap lines")
   "tt"  '(treemacs :which-key "Treemacs")
   "tu"  '(vundo :which-key "Undo tree")
+
+  ;;; <leader> v --- versioning
+  "v"   '(:ignore t :which-key "versioning")
+  "vor" '(forge-browse-remote :which-key "Browse remote")
+  "voc" '(forge-browse-commit :which-key "Browse commit")
+  "voi" '(forge-browse-issues :which-key "Browse issues")
+  "voI" '(forge-browse-issue :which-key "Browse an issue")
+  "vop" '(forge-browse-pullreqs :which-key "Browse pull requests")
   
   ;;; <leader> w --- window
   "w"   '(:ignore t :which-key "window")

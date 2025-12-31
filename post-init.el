@@ -38,6 +38,7 @@
 (load "+activities.el")
 (load "+orderless.el")
 (load "+editor.el")
+(load "+docker.el")
 
 (load "secrets.el")
 

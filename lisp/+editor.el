@@ -15,3 +15,9 @@
           (lambda ()
             (setq fill-column 72)
             (auto-fill-mode 1)))
+
+;; Persist entries
+(server-mode +1)
+(save-place-mode +1)
+(savehist-mode +1)
+(recentf-mode +1)

@@ -39,10 +39,6 @@
 (load "+orderless.el")
 (load "+editor.el")
 (load "+docker.el")
+(load "+git-timemachine.el")
 
 (load "secrets.el")
-
-(server-mode +1)
-(save-place-mode +1)
-(savehist-mode +1)
-(recentf-mode +1)

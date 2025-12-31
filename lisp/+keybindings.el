@@ -62,6 +62,15 @@
   "u"   '(universal-argument :which-key "Universal argument")
   "h"   '(help-command :which-key "Help")
 
+  ;;; <leader> & --- snippets
+  "&"    '(:ignore t :which-key "snippets")
+  "&n"   '(yas-new-snippet :which-key "New snippet")
+  "&i"   '(yas-insert-snippet :which-key "Snippet")
+  "&/"   '(yas-visit-snippet-file :which-key "Find global snippet")
+  "&r"   '(yas-reload-all :which-key "Reload snippets")
+  "&c"   '(aya-create :which-key "Create Temp Template")
+  "&e"   '(aya-expand :which-key "Use Temp Template")
+
   ;;; <leader> a --- activities
   "a"   '(:ignore t :which-key "activities")
   "aa"  '(activities-resume :which-key "Resume activity")
@@ -165,15 +174,6 @@
   "ir"  '(evil-show-registers :which-key "From register")
   "iy"  '(yank-pop :which-key "From kill ring")
   "is"  '(yas-insert-snippet :which-key "Snippet")
-
-  ;;; <leader> & --- snippets
-  "&"    '(:ignore t :which-key "snippets")
-  "&n"   '(yas-new-snippet :which-key "New snippet")
-  "&i"   '(yas-insert-snippet :which-key "Snippet")
-  "&/"   '(yas-visit-snippet-file :which-key "Find global snippet")
-  "&r"   '(yas-reload-all :which-key "Reload snippets")
-  "&c"   '(aya-create :which-key "Create Temp Template")
-  "&e"   '(aya-expand :which-key "Use Temp Template")
   
   ;;; <leader> o --- open
   "o"   '(:ignore t :which-key "open")
@@ -241,11 +241,43 @@
 
   ;;; <leader> v --- versioning
   "v"   '(:ignore t :which-key "versioning")
+  "vB"  '(magit-blame-addition :which-key "Magit blame")
+  "vC"  '(magit-clone :which-key "Magit clone")
+  "vF"  '(magit-fetch :which-key "Magit fetch")
+  "vg"  '(magit-status :which-key "Magit status")
+  "vG"  '(magit-status-here :which-key "Magit status here")
+  "vL"  '(magit-log-buffer-file :which-key "Magit buffer log")
+  "vR"  '(vc-revert :which-key "Git revert file")
+  "vS"  '(magit-stage :which-key "Magit stage file")
+  "vt"  '(git-timemachine-toggle :which-key "Git time machine")
+  "vU"  '(magit-unstage :which-key "Magit unstage file")
+  "vx"  '(magit-file-delete :which-key "Magit file delete")
+  "v/"  '(magit-dispatch :which-key "Magit dispatch")
+  "v."  '(magit-file-dispatch :which-key "Magit file dispatch")
+  "v'"  '(forge-dispatch :which-key "Forge dispatch")
+  "vfc" '(magit-show-commit :which-key "Find commit")
+  "vff" '(magit-find-file :which-key "Find file")
+  "vfg" '(magit-find-git-config-file :which-key "Find gitconfig file")
+  "vfi" '(forge-visit-issue :which-key "Find issue")
+  "vfp" '(forge-visit-pullreq :which-key "Find pull request")
+  "vlg" '(gist-list :which-key "List gists")
+  "vlr" '(magit-list-repositories :which-key "List repositories")
+  "vls" '(magit-list-submodules :which-key "List submodules")
+  "vli" '(forge-list-issues :which-key "List issues")
+  "vlp" '(forge-list-pullreqs :which-key "List pull requests")
+  "vln" '(forge-list-notifications :which-key "List notifications")
   "vor" '(forge-browse-remote :which-key "Browse remote")
   "voc" '(forge-browse-commit :which-key "Browse commit")
   "voi" '(forge-browse-issues :which-key "Browse issues")
   "voI" '(forge-browse-issue :which-key "Browse an issue")
   "vop" '(forge-browse-pullreqs :which-key "Browse pull requests")
+  "vcp" '(forge-create-pullreq :which-key "Pull request")
+  "vcr" '(magit-init :which-key "Initialize repo")
+  "vcR" '(magit-clone :which-key "Clone repo")
+  "vcc" '(magit-commit-create :which-key "Commit")
+  "vcf" '(magit-commit-fixup :which-key "Fixup")
+  "vci" '(forge-create-issue :which-key "Issue")
+  "vcp" '(forge-create-pullreq :which-key "Pull request")
   
   ;;; <leader> w --- window
   "w"   '(:ignore t :which-key "window")

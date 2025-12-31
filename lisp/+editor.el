@@ -3,7 +3,7 @@
 (setq-default fill-column 120
               delete-trailing-lines t)
 
-;; Use auto-fill in these modes
+;; Use auto-fill in these modes at 120
 (dolist (hook '(text-mode-hook
                 markdown-mode-hook
                 org-mode-hook

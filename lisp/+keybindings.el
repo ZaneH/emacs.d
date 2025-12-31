@@ -55,6 +55,20 @@
   ":"   '(execute-extended-command :which-key "M-x")
   "u"   '(universal-argument :which-key "Universal argument")
   "h"   '(help-command :which-key "Help")
+
+  ;;; <leader> a --- activities
+  "a"   '(:ignore t :which-key "activities")
+  "aa"  '(activities-resume :which-key "Resume activity")
+  "ac"  '(activities-new :which-key "Create activity")
+  "ad"  '(activities-define :which-key "Define activity")
+  "az"  '(activities-suspend :which-key "Suspend activity")
+  "ak"  '(activities-kill :which-key "Kill activity")
+  "as"  '(activities-switch :which-key "Switch activity")
+  "ab"  '(activities-switch-buffer :which-key "Switch buffer")
+  "ag"  '(activities-revert :which-key "Revert to default")
+  "al"  '(activities-list :which-key "List activities")
+  "aR"  '(activities-rename :which-key "Rename activity")
+  "ax"  '(activities-discard :which-key "Discard activity")
   
   ;;; <leader> b --- buffer
   "b"   '(:ignore t :which-key "buffer")
@@ -242,7 +256,7 @@
 
   ;;; <leader> x --- Perspective
   "x"   '(:ignore t :which-key "workspace")
-  "xw"  '(persp-switch :which-key "switch")
+  "xs"  '(persp-switch :which-key "switch")
   "xk"  '(persp-kill :which-key "kill")
   "xr"  '(persp-rename :which-key "rename")
   "xb"  '(persp-switch-to-buffer :which-key "buffer"))

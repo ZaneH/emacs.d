@@ -35,7 +35,7 @@
 (load "+dired.el")
 (load "+indent.el")
 (load "+go.el")
-(load "+perspective.el")
+(load "+activities.el")
 (load "+orderless.el")
 (load "+editor.el")
 

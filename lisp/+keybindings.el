@@ -44,6 +44,12 @@
  "C-w" 'backward-kill-word
  "<escape>" 'abort-recursive-edit)
 
+;; Mouse side buttons for navigation
+(general-define-key
+ :states '(normal visual motion)
+ "<mouse-8>" 'evil-jump-backward
+ "<mouse-9>" 'evil-jump-forward)
+
 ;;; Leader key bindings
 (my/leader
   ;; Top-level bindings

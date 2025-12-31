@@ -4,5 +4,4 @@
   :straight t
   :defer t
   :init
-  (activities-mode)
-  (activities-tabs-mode))
+  (activities-mode)) 

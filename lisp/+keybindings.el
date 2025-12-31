@@ -54,7 +54,6 @@
   ";"   '(eval-expression :which-key "Eval expression")
   ":"   '(execute-extended-command :which-key "M-x")
   "u"   '(universal-argument :which-key "Universal argument")
-  "x"   '(scratch-buffer :which-key "Scratch buffer")
   "h"   '(help-command :which-key "Help")
   
   ;;; <leader> b --- buffer
@@ -239,7 +238,14 @@
   "w+"  '(evil-window-increase-height :which-key "Increase height")
   "w-"  '(evil-window-decrease-height :which-key "Decrease height")
   "w>"  '(evil-window-increase-width :which-key "Increase width")
-  "w<"  '(evil-window-decrease-width :which-key "Decrease width"))
+  "w<"  '(evil-window-decrease-width :which-key "Decrease width")
+
+  ;;; <leader> x --- Perspective
+  "x"   '(:ignore t :which-key "workspace")
+  "xw"  '(persp-switch :which-key "switch")
+  "xk"  '(persp-kill :which-key "kill")
+  "xr"  '(persp-rename :which-key "rename")
+  "xb"  '(persp-switch-to-buffer :which-key "buffer"))
 
 ;;; Evil-mc keybindings (multiple cursors)
 (my/leader

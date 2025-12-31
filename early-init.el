@@ -22,6 +22,9 @@
 
 ;;; Code:
 
+;;; Fixes LSP issue
+(setenv "LSP_USE_PLISTS" "true")
+
 ;;; Internal variables
 
 ;; Backup of `gc-cons-threshold' and `gc-cons-percentage' before startup.

@@ -2,7 +2,9 @@
 
 (use-package helm
   :straight t
-  :defer t)
+  :defer t
+  :config
+  (setq helm-completion-style 'emacs))
 
 (use-package helm-projectile
   :straight t

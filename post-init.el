@@ -34,5 +34,13 @@
 (load "+minibuffer.el")
 (load "+dired.el")
 (load "+indent.el")
+(load "+go.el")
+(load "+perspective.el")
+(load "+orderless.el")
 
 (load "secrets.el")
+
+(server-mode +1)
+(save-place-mode +1)
+(savehist-mode +1)
+(recentf-mode +1)

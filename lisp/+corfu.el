@@ -12,7 +12,7 @@
   (corfu-auto-delay 0)            ; No delay for completion
   (corfu-popupinfo-delay '(0.5 . 0.2))  ; Automatically update info popup after that number of seconds
   (corfu-preview-current 'insert) ; insert previewed candidate
-  (corfu-preselect 'prompt)
+  (corfu-preselect 'first)
   (corfu-on-exact-match nil)      ; Don't auto expand tempel snippets
   ;; Optionally use TAB for cycling, default is `corfu-complete'.
   :bind (:map corfu-map

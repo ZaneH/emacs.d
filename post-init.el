@@ -37,6 +37,7 @@
 (load "+go.el")
 (load "+perspective.el")
 (load "+orderless.el")
+(load "+editor.el")
 
 (load "secrets.el")
 

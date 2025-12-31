@@ -33,5 +33,6 @@
 (load "+smartparens.el")
 (load "+minibuffer.el")
 (load "+dired.el")
+(load "+indent.el")
 
 (load "secrets.el")

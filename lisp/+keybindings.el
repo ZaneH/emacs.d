@@ -375,5 +375,23 @@
     "tl" '(markdown-toggle-url-hiding :which-key "URL hiding")
     "tm" '(markdown-toggle-markup-hiding :which-key "Markup hiding")))
 
+(with-eval-after-load 'go-mode
+  (my/local-leader
+    :keymaps 'go-mode-map
+    "=" '(gofmt :which-key "Format")
+    "i" '(go-goto-imports :which-key "Goto imports")
+    "d" '(godoc-at-point :which-key "Godoc at point")
+    
+    "a" '(lsp-execute-code-action :which-key "Code action")
+    "r" '(lsp-rename :which-key "Rename")
+    
+    "t" '(:ignore t :which-key "test")
+    "tt" '((lambda () (interactive) (compile "go test -v")) :which-key "Test all")
+    "tf" '((lambda () (interactive) (compile (format "go test -v %s" buffer-file-name))) :which-key "Test file")
+    
+    "b" '(:ignore t :which-key "build")
+    "bb" '((lambda () (interactive) (compile "go build")) :which-key "Build")
+    "br" '((lambda () (interactive) (compile "go run .")) :which-key "Run")))
+
 (provide '+keybindings)
 ;;; +keybindings.el ends here

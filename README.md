@@ -4,9 +4,10 @@
 
 **npm**
 
+- `copilot-language-server`
+- `prettierd`
 - `typescript`
 - `typescript-language-server`
-- `copilot-language-server`
 
 **other**
 
@@ -14,7 +15,6 @@
 - `git`
 - `go`
 - `gopls`
-- `prettierd`
 - `python`
 
 ## Preview

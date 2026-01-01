@@ -30,7 +30,6 @@
 (load "+vundo.el")
 (load "+prettier.el")
 (load "+git-gutter.el")
-(load "+smartparens.el")
 (load "+minibuffer.el")
 (load "+dired.el")
 (load "+indent.el")
@@ -41,5 +40,6 @@
 (load "+docker.el")
 (load "+git-timemachine.el")
 (load "+markdown.el")
+(load "+protobuf.el")
 
 (load "secrets.el")

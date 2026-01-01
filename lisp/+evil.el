@@ -13,6 +13,8 @@
 (use-package evil-collection
   :straight t
   :after evil
+  :init
+  (setq forge-add-default-bindings nil)
   :config
   (evil-collection-init))
 

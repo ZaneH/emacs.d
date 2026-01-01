@@ -345,6 +345,17 @@
    "TAB" 'corfu-insert
    "RET" 'corfu-insert))
 
+;; Bind C-SPC to open completion menu
+(setq set-mark-command-repeat-pop t)
+(global-unset-key (kbd "C-SPC"))
+(global-unset-key (kbd "C-@"))
+
+(general-define-key
+ :states '(insert)
+ :keymaps 'override
+ "C-SPC" #'completion-at-point
+ "C-@"   #'completion-at-point)
+
 ;;; Additional projectile configuration
 ;; Make projectile use ripgrep/ag for searching
 (with-eval-after-load 'projectile

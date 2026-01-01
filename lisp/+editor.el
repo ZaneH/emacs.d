@@ -21,3 +21,6 @@
 (save-place-mode +1)
 (savehist-mode +1)
 (recentf-mode +1)
+
+;; Smart parenthesis
+(electric-pair-mode 1)

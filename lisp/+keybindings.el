@@ -12,7 +12,16 @@
     :states '(normal visual insert emacs)
     :keymaps 'override
     :prefix "SPC"
-    :global-prefix "C-SPC"))
+    :global-prefix "C-SPC")
+  (general-create-definer my/local-leader
+    :states '(normal visual)
+    :keymaps 'override
+    :prefix "SPC m"
+    :global-prefix "C-SPC m")
+  (general-define-key
+   :states '(normal visual)
+   :keymaps 'override
+   "," (general-simulate-key "SPC m")))
 
 ;;; Global keybindings (non-leader)
 (general-define-key
@@ -29,8 +38,7 @@
  "C-S-f" 'toggle-frame-fullscreen
 
  ;; Comment
- "gcc" 'comment-line
- )
+ "gcc" 'comment-line)
 
 ;; Minibuffer navigation
 (general-define-key
@@ -346,6 +354,26 @@
         projectile-globally-ignored-directories
         (append '(".git" "node_modules" ".cache" "target" "build" "dist")
                 projectile-globally-ignored-directories)))
+
+(with-eval-after-load 'markdown-mode
+  (my/local-leader
+    :keymaps 'markdown-mode-map
+    "'" '(markdown-edit-code-block :which-key "Edit code block")
+    "o" '(markdown-open :which-key "Open")
+    "p" '(markdown-preview :which-key "Preview")
+    "e" '(markdown-export :which-key "Export")
+    
+    "i" '(:ignore t :which-key "insert")
+    "iT" '(markdown-toc-generate-toc :which-key "Table of contents")
+    "ii" '(markdown-insert-image :which-key "Image")
+    "il" '(markdown-insert-link :which-key "Link")
+    "i-" '(markdown-insert-hr :which-key "<hr>")
+    "it" '(markdown-insert-table :which-key "Table")
+    
+    "t" '(:ignore t :which-key "toggle")
+    "ti" '(markdown-toggle-inline-images :which-key "Inline images")
+    "tl" '(markdown-toggle-url-hiding :which-key "URL hiding")
+    "tm" '(markdown-toggle-markup-hiding :which-key "Markup hiding")))
 
 (provide '+keybindings)
 ;;; +keybindings.el ends here

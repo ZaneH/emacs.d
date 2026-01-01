@@ -40,5 +40,6 @@
 (load "+editor.el")
 (load "+docker.el")
 (load "+git-timemachine.el")
+(load "+markdown.el")
 
 (load "secrets.el")

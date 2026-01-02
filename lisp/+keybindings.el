@@ -402,7 +402,12 @@
       
       "b" '(:ignore t :which-key "build")
       "bb" '((lambda () (interactive) (compile "go build")) :which-key "Build")
-      "br" '((lambda () (interactive) (compile "go run .")) :which-key "Run"))))
+      "br" '((lambda () (interactive) (compile "go run .")) :which-key "Run")))
+
+  ;; Super agenda header navigation
+  (general-def org-super-agenda-header-map
+    "k" #'org-agenda-prevous-line
+    "j" #'org-agenda-next-line))
 
 (provide '+keybindings)
 ;;; +keybindings.el ends here

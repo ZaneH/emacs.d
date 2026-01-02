@@ -8,9 +8,9 @@
 
 (eval-when-compile (require 'use-package))
 
-;; (load "+org")
-;; (load "+agenda")
-;; (load "+org-modern.el")
+(load "+org")
+(load "+agenda")
+(load "+org-modern.el")
 (load "+evil")
 (load "+keybindings")
 (load "+icons")

@@ -23,3 +23,11 @@
   :init
   (require 'evil-mc)
   (global-evil-mc-mode 1))
+
+(use-package evil-org
+  :straight t
+  :after (evil org)
+  :hook (org-mode . (lambda () evil-org-mode))
+  :config
+  (require 'evil-org-agenda)
+  (evil-org-agenda-set-keys))

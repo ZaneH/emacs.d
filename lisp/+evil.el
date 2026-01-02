@@ -4,6 +4,7 @@
   :straight t
   :init
   (setq evil-want-C-u-scroll t)
+  (setq evil-want-C-i-jump t)
   (setq evil-want-integration t)
   (setq evil-want-keybinding nil)
   (setq evil-undo-system 'undo-redo)
@@ -31,3 +32,9 @@
   :config
   (require 'evil-org-agenda)
   (evil-org-agenda-set-keys))
+
+(use-package evil-surround
+  :straight t
+  :after evil
+  :config
+  (global-evil-surround-mode 1))

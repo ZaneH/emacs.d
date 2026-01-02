@@ -201,12 +201,17 @@
   
   ;;; <leader> o --- open
   "o"   '(:ignore t :which-key "open")
+  "oaa" '(org-agenda :which-key "Agenda")
+  "oat" '(org-todo-list :which-key "Todo list")
+  "oav" '(org-search-view :which-key "View search")
+  "oam" '(org-tags-view :which-key "Tags search")
   "op"  '(treemacs :which-key "Project sidebar")
   "oP"  '(treemacs-find-file :which-key "Find in sidebar")
   "ot"  '(vterm-toggle :which-key "Toggle terminal")
   "oT"  '(vterm :which-key "New terminal")
   "o-"  '(dired-jump :which-key "Dired")
-  "oD"   '(docker :which-key "Docker")
+  "oD"  '(docker :which-key "Docker")
+  "of"  '(make-frame :which-key "New frame")
 
   ;;; <leader> o --- open llm
   "oll" '(gptel :which-key "Open gptel")

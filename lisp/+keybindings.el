@@ -288,14 +288,7 @@
   "w+"  '(evil-window-increase-height :which-key "Increase height")
   "w-"  '(evil-window-decrease-height :which-key "Decrease height")
   "w>"  '(evil-window-increase-width :which-key "Increase width")
-  "w<"  '(evil-window-decrease-width :which-key "Decrease width")
-
-  ;;; <leader> x --- Perspective
-  "x"   '(:ignore t :which-key "workspace")
-  "xs"  '(persp-switch :which-key "switch")
-  "xk"  '(persp-kill :which-key "kill")
-  "xr"  '(persp-rename :which-key "rename")
-  "xb"  '(persp-switch-to-buffer :which-key "buffer"))
+  "w<"  '(evil-window-decrease-width :which-key "Decrease width"))
 
 ;;; Evil-mc keybindings (multiple cursors)
 (my/leader

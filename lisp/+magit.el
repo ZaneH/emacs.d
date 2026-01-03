@@ -6,7 +6,6 @@
 
 (use-package forge
   :straight t
-  :defer t
   :after magit)
 
 (use-package magit-todos

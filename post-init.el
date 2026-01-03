@@ -10,11 +10,10 @@
 
 (load "+org")
 (load "+agenda")
-(load "+org-modern.el")
+(load "+org-modern")
 (load "+evil")
 (load "+keybindings")
 (load "+icons")
-;; (load "+dashboard.el")
 (load "+theme")
 (load "+tree-sitter")
 (load "+copilot")

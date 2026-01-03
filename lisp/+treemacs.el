@@ -35,12 +35,17 @@
 
 (use-package treemacs-evil
   :straight t
+  :defer t
   :after (treemacs evil))
 
 (use-package treemacs-projectile
   :straight t
-  :after (treemacs projectile))
+  :after (treemacs projectile)
+  :defer t
+  :config
+  (setq treemacs-project-follow-mode t))
 
 (use-package treemacs-magit
   :straight t
-  :after (treemacs magit))
+  :after (treemacs magit)
+  :defer t)

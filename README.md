@@ -15,6 +15,7 @@
 - `git`
 - `go`
 - `gopls`
+- `latex`
 - `python`
 
 ## Preview

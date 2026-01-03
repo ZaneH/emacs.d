@@ -5,4 +5,6 @@
   ;; :defer t -- Do not defer
   :after org
   :init
-  (setq org-roam-directory "~/repos/org/roam/"))
+  (setq org-roam-directory "~/repos/org/roam/")
+  :config
+  (org-roam-db-autosync-mode))

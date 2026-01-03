@@ -450,6 +450,192 @@
       "bb" '((lambda () (interactive) (compile "go build")) :which-key "Build")
       "br" '((lambda () (interactive) (compile "go run .")) :which-key "Run")))
 
+  (with-eval-after-load 'org
+    ;; Global org-mode keybindings
+    (general-define-key
+     :keymaps 'org-mode-map
+     "C-c C-S-l" '+org/remove-link
+     "C-c C-i" 'org-toggle-inline-images
+     "S-RET" '+org/shift-return
+     "C-RET" '+org/insert-item-below
+     "C-S-RET" '+org/insert-item-above
+     "C-M-RET" 'org-insert-subheading
+     [C-return] '+org/insert-item-below
+     [C-S-return] '+org/insert-item-above
+     [C-M-return] 'org-insert-subheading
+     [remap beginning-of-line] 'org-beginning-of-line
+     [remap end-of-line] 'org-end-of-line)
+    
+    ;; macOS-specific bindings
+    (when (eq system-type 'darwin)
+      (general-define-key
+       :keymaps 'org-mode-map
+       [s-return] '+org/insert-item-below
+       [s-S-return] '+org/insert-item-above
+       [s-M-return] 'org-insert-subheading))
+    
+    (my/local-leader
+      :keymaps 'org-mode-map
+      "#" '(org-update-statistics-cookies :which-key "Update statistics")
+      "'" '(org-edit-special :which-key "Edit special")
+      "*" '(org-ctrl-c-star :which-key "Turn to heading")
+      "-" '(org-ctrl-c-minus :which-key "Turn to item")
+      "," '(org-switchb :which-key "Switch buffer")
+      "." '(org-goto :which-key "Goto")
+      "@" '(org-cite-insert :which-key "Insert citation")
+      "A" '(org-archive-subtree-default :which-key "Archive subtree")
+      "e" '(org-export-dispatch :which-key "Export")
+      "f" '(org-footnote-action :which-key "Footnote")
+      "h" '(org-toggle-heading :which-key "Toggle heading")
+      "i" '(org-toggle-item :which-key "Toggle item")
+      "I" '(org-id-get-create :which-key "Get/create ID")
+      "k" '(org-babel-remove-result :which-key "Remove result")
+      "n" '(org-store-link :which-key "Store link")
+      "o" '(org-set-property :which-key "Set property")
+      "q" '(org-set-tags-command :which-key "Set tags")
+      "t" '(org-todo :which-key "Todo")
+      "T" '(org-todo-list :which-key "Todo list")
+      "x" '(org-toggle-checkbox :which-key "Toggle checkbox")
+      
+      "a" '(:ignore t :which-key "attachments")
+      "aa" '(org-attach :which-key "Attach")
+      "ad" '(org-attach-delete-one :which-key "Delete one")
+      "aD" '(org-attach-delete-all :which-key "Delete all")
+      "af" '(+org/find-file-in-attachments :which-key "Find file")
+      "an" '(org-attach-new :which-key "New")
+      "ao" '(org-attach-open :which-key "Open")
+      "aO" '(org-attach-open-in-emacs :which-key "Open in Emacs")
+      "ar" '(org-attach-reveal :which-key "Reveal")
+      "aR" '(org-attach-reveal-in-emacs :which-key "Reveal in Emacs")
+      "au" '(org-attach-url :which-key "Attach URL")
+      "as" '(org-attach-set-directory :which-key "Set directory")
+      "aS" '(org-attach-sync :which-key "Sync")
+      
+      "b" '(:ignore t :which-key "tables")
+      "b-" '(org-table-insert-hline :which-key "Insert hline")
+      "ba" '(org-table-align :which-key "Align")
+      "bb" '(org-table-blank-field :which-key "Blank field")
+      "bc" '(org-table-create-or-convert-from-region :which-key "Create/convert")
+      "be" '(org-table-edit-field :which-key "Edit field")
+      "bf" '(org-table-edit-formulas :which-key "Edit formulas")
+      "bh" '(org-table-field-info :which-key "Field info")
+      "bs" '(org-table-sort-lines :which-key "Sort lines")
+      "br" '(org-table-recalculate :which-key "Recalculate")
+      "bR" '(org-table-recalculate-buffer-tables :which-key "Recalculate buffer")
+      
+      "bd" '(:ignore t :which-key "delete")
+      "bdc" '(org-table-delete-column :which-key "Delete column")
+      "bdr" '(org-table-kill-row :which-key "Delete row")
+      
+      "bi" '(:ignore t :which-key "insert")
+      "bic" '(org-table-insert-column :which-key "Insert column")
+      "bih" '(org-table-insert-hline :which-key "Insert hline")
+      "bir" '(org-table-insert-row :which-key "Insert row")
+      "biH" '(org-table-hline-and-move :which-key "Hline and move")
+      
+      "bt" '(:ignore t :which-key "toggle")
+      "btf" '(org-table-toggle-formula-debugger :which-key "Formula debugger")
+      "bto" '(org-table-toggle-coordinate-overlays :which-key "Coordinate overlays")
+      
+      "c" '(:ignore t :which-key "clock")
+      "cc" '(org-clock-cancel :which-key "Cancel")
+      "cd" '(org-clock-mark-default-task :which-key "Mark default")
+      "ce" '(org-clock-modify-effort-estimate :which-key "Modify effort")
+      "cE" '(org-set-effort :which-key "Set effort")
+      "cg" '(org-clock-goto :which-key "Goto")
+      "ci" '(org-clock-in :which-key "Clock in")
+      "cI" '(org-clock-in-last :which-key "Clock in last")
+      "co" '(org-clock-out :which-key "Clock out")
+      "cr" '(org-resolve-clocks :which-key "Resolve")
+      "cR" '(org-clock-report :which-key "Report")
+      "ct" '(org-evaluate-time-range :which-key "Evaluate time")
+      "c=" '(org-clock-timestamps-up :which-key "Timestamps up")
+      "c-" '(org-clock-timestamps-down :which-key "Timestamps down")
+      
+      "d" '(:ignore t :which-key "date/deadline")
+      "dd" '(org-deadline :which-key "Deadline")
+      "ds" '(org-schedule :which-key "Schedule")
+      "dt" '(org-time-stamp :which-key "Timestamp")
+      "dT" '(org-time-stamp-inactive :which-key "Inactive timestamp")
+      
+      "g" '(:ignore t :which-key "goto")
+      "gg" '(org-goto :which-key "Goto")
+      "gc" '(org-clock-goto :which-key "Clock")
+      "gi" '(org-id-goto :which-key "ID")
+      "gr" '(org-refile-goto-last-stored :which-key "Last refile")
+      "gx" '(org-capture-goto-last-stored :which-key "Last capture")
+      
+      "l" '(:ignore t :which-key "links")
+      "lc" '(org-cliplink :which-key "Cliplink")
+      "li" '(org-id-store-link :which-key "ID link")
+      "ll" '(org-insert-link :which-key "Insert")
+      "lL" '(org-insert-all-links :which-key "Insert all")
+      "ls" '(org-store-link :which-key "Store")
+      "lS" '(org-insert-last-stored-link :which-key "Last stored")
+      "lt" '(org-toggle-link-display :which-key "Toggle display")
+      "ly" '(+org/yank-link :which-key "Yank")
+      
+      "P" '(:ignore t :which-key "publish")
+      "Pa" '(org-publish-all :which-key "All")
+      "Pf" '(org-publish-current-file :which-key "File")
+      "Pp" '(org-publish :which-key "Project")
+      "PP" '(org-publish-current-project :which-key "Current project")
+      "Ps" '(org-publish-sitemap :which-key "Sitemap")
+      
+      "r" '(:ignore t :which-key "refile")
+      "rr" '(org-refile :which-key "Refile")
+      "rR" '(org-refile-reverse :which-key "Reverse refile")
+      
+      "s" '(:ignore t :which-key "tree/subtree")
+      "sa" '(org-toggle-archive-tag :which-key "Archive tag")
+      "sb" '(org-tree-to-indirect-buffer :which-key "Indirect buffer")
+      "sc" '(org-clone-subtree-with-time-shift :which-key "Clone")
+      "sd" '(org-cut-subtree :which-key "Cut")
+      "sh" '(org-promote-subtree :which-key "Promote")
+      "sj" '(org-move-subtree-down :which-key "Move down")
+      "sk" '(org-move-subtree-up :which-key "Move up")
+      "sl" '(org-demote-subtree :which-key "Demote")
+      "sn" '(org-narrow-to-subtree :which-key "Narrow")
+      "sr" '(org-refile :which-key "Refile")
+      "ss" '(org-sparse-tree :which-key "Sparse tree")
+      "sA" '(org-archive-subtree-default :which-key "Archive")
+      "sN" '(widen :which-key "Widen")
+      "sS" '(org-sort :which-key "Sort")
+      
+      "p" '(:ignore t :which-key "priority")
+      "pd" '(org-priority-down :which-key "Down")
+      "pp" '(org-priority :which-key "Set priority")
+      "pu" '(org-priority-up :which-key "Up")))
+
+  (with-eval-after-load 'org-agenda
+    (my/local-leader
+      :keymaps 'org-agenda-mode-map
+      "d" '(:ignore t :which-key "date/deadline")
+      "dd" '(org-agenda-deadline :which-key "Deadline")
+      "ds" '(org-agenda-schedule :which-key "Schedule")
+      
+      "c" '(:ignore t :which-key "clock")
+      "cc" '(org-agenda-clock-cancel :which-key "Cancel")
+      "cg" '(org-agenda-clock-goto :which-key "Goto")
+      "ci" '(org-agenda-clock-in :which-key "Clock in")
+      "co" '(org-agenda-clock-out :which-key "Clock out")
+      "cr" '(org-agenda-clockreport-mode :which-key "Report mode")
+      "cs" '(org-agenda-show-clocking-issues :which-key "Show issues")
+      
+      "p" '(:ignore t :which-key "priority")
+      "pd" '(org-agenda-priority-down :which-key "Down")
+      "pp" '(org-agenda-priority :which-key "Set priority")
+      "pu" '(org-agenda-priority-up :which-key "Up")
+      
+      "q" '(org-agenda-set-tags :which-key "Set tags")
+      "r" '(org-agenda-refile :which-key "Refile")
+      "t" '(org-agenda-todo :which-key "Todo"))
+    
+    (general-define-key
+     :keymaps 'org-agenda-mode-map
+     :states 'motion
+     "C-SPC" 'org-agenda-show-and-scroll-up))
+
   ;; Super agenda header navigation
   (general-def org-super-agenda-header-map
     "k" #'org-agenda-prevous-line

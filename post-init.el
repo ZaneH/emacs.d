@@ -48,5 +48,6 @@
 (load "+markdown")
 (load "+protobuf")
 (load "+dape")
+(load "+vertico")
 
 (load "secrets")

@@ -15,7 +15,8 @@
   :straight t
   :after evil
   :init
-  (setq forge-add-default-bindings nil)
+  (setq evil-collection-want-find-usages-bindings t)
+  (setq evil-collection-calendar-want-org-bindings t)
   :config
   (evil-collection-init))
 

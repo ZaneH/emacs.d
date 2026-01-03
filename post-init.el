@@ -47,5 +47,6 @@
 (load "+git-timemachine")
 (load "+markdown")
 (load "+protobuf")
+(load "+dape")
 
 (load "secrets")

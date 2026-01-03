@@ -1,4 +1,4 @@
-# emacs.d config
+# .emacs.d config
 
 ### Dependencies
 

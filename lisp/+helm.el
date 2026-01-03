@@ -35,3 +35,15 @@
   :commands (helm-rg)
   :config
   (setq helm-rg-default-directory 'git-root))
+
+(use-package helm-lsp
+  :straight t
+  :defer t
+  :after (helm lsp-mode)
+  :init
+  (define-key lsp-mode-map [remap xref-find-apropos] #'helm-lsp-workspace-symbol))
+
+(use-package helm-xref
+  :straight t
+  :defer t
+  :after helm)

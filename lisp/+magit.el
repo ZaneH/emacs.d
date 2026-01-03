@@ -2,7 +2,8 @@
 
 (use-package magit
   :straight t
-  :defer t)
+  ;; :defer t -- Do not defer
+)
 
 (use-package forge
   :straight t

@@ -51,5 +51,7 @@
 (load "+org-roam")
 (load "+restart")
 (load "+grip")
+(load "+org-cv")
+(load "+pdf-tools")
 
 (load "secrets")

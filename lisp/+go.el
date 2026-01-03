@@ -11,4 +11,5 @@
   (add-hook 'go-mode-hook #'lsp-go-install-save-hooks)
   (add-hook 'go-mode-hook
             (lambda ()
-              (defalias 'godef-jump #'lsp-find-definition))))
+              (defalias 'godef-jump #'lsp-find-definition)
+              (defalias 'godef-describe #'lsp-ui-doc-glance))))

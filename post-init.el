@@ -31,6 +31,7 @@
 (load "+ace-window")
 (load "+yasnippet")
 (load "+lsp")
+(load "+lsp-ui")
 (load "+corfu")
 (load "+vundo")
 (load "+prettier")

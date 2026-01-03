@@ -4,7 +4,6 @@
   :straight t
   :defer t
   :config
-  ;; git path on NixOS
   (setq treemacs-git-executable (executable-find "git"))
   (setq treemacs-python-executable (executable-find "python"))
 

@@ -407,7 +407,11 @@
   ;; Super agenda header navigation
   (general-def org-super-agenda-header-map
     "k" #'org-agenda-prevous-line
-    "j" #'org-agenda-next-line))
+    "j" #'org-agenda-next-line)
+
+  (general-define-key
+   "M-=" 'evil-numbers/inc-at-pt
+   "M--" 'evil-numbers/dec-at-pt))
 
 (provide '+keybindings)
 ;;; +keybindings.el ends here

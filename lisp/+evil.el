@@ -39,3 +39,8 @@
   :after evil
   :config
   (global-evil-surround-mode 1))
+
+(use-package evil-numbers
+  :straight t
+  :defer t
+  :after evil)

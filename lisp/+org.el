@@ -5,6 +5,7 @@
   :commands (org-mode org-agenda)
   :mode ("\\.org\\'" . org-mode)
   :config
+  (setq org-directory "~/repos/org")
   (setq org-agenda-files '("~/repos/org/todo.org"))
   :custom
   (org-startup-folded t)
@@ -25,3 +26,10 @@
   :init
   (require 'org-bullets)
   (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
+
+(use-package org-archive
+  :straight (:type built-in)
+  :defer t
+  :after org
+  :config
+  (setq org-archive-location "archive.org::datetree/"))

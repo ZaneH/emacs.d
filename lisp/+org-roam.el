@@ -2,5 +2,7 @@
 
 (use-package org-roam
   :straight t
-  :defer t
-  :after org)
+  ;; :defer t -- Do not defer
+  :after org
+  :init
+  (setq org-roam-directory "~/repos/org/roam/"))

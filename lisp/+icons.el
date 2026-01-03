@@ -7,4 +7,5 @@
 
 (use-package all-the-icons-dired
   :straight t
+  ;; :defer t -- Do not defer
   :hook (dired-mode . all-the-icons-dired-mode))

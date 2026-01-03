@@ -48,5 +48,7 @@
 (load "+protobuf")
 (load "+dape")
 (load "+vertico")
+(load "+org-roam")
+(load "+restart")
 
 (load "secrets")

@@ -35,7 +35,7 @@
 
 (use-package treemacs-evil
   :straight t
-  :defer t
+  ;; :defer t -- Do not defer
   :after (treemacs evil))
 
 (use-package treemacs-projectile

@@ -10,7 +10,7 @@
 
 (use-package magit-todos
   :straight t
-  :defer t
+  ;; :defer t -- Do not defer
   :after magit
   :config (magit-todos-mode +1))
 

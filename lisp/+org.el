@@ -17,3 +17,11 @@
   (org-agenda-start-with-log-mode t)
   (org-log-done 'time)
   (org-log-into-drawer t))
+
+(use-package org-bullets
+  :straight t
+  :defer t
+  :after org
+  :init
+  (require 'org-bullets)
+  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))

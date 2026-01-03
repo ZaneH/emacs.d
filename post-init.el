@@ -36,7 +36,7 @@
 (load "+vundo")
 (load "+prettier")
 (load "+git-gutter")
-(load "+minibuffer")
+(load "+marginalia")
 (load "+dired")
 (load "+indent")
 (load "+go")

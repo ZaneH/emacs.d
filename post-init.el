@@ -50,5 +50,6 @@
 (load "+vertico")
 (load "+org-roam")
 (load "+restart")
+(load "+grip")
 
 (load "secrets")

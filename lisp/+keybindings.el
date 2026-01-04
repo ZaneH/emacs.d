@@ -71,6 +71,7 @@
     ":"   '(execute-extended-command :which-key "M-x")
     "u"   '(universal-argument :which-key "Universal argument")
     "h"   '(help-command :which-key "Help")
+    "/"   '(helm-rg :which-key "Search project")
 
     ;;; <leader> & --- snippets
     "&"    '(:ignore t :which-key "snippets")
@@ -280,8 +281,6 @@
     "s"   '(:ignore t :which-key "search")
     "sb"  '(helm-occur :which-key "Search buffer")
     "ss"  '(helm-occur :which-key "Search buffer")
-    "sP"  '(helm-rg :which-key "Search with ripgrep")
-    "sd"  '(helm-do-grep-ag :which-key "Search directory")
     "sm"  '(bookmark-jump :which-key "Jump to bookmark")
     "sM"  '(bookmark-set :which-key "Set bookmark")
     "sj"  '(evil-show-jumps :which-key "Jump list")

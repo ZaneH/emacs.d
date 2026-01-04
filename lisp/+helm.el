@@ -3,6 +3,8 @@
 (use-package helm
   :straight t
   :defer t
+  :bind (:map helm-map
+              ("C-w" . backward-kill-word))
   :config
   (setq helm-completion-style 'emacs))
 
@@ -20,6 +22,7 @@
   :after helm
   :commands (helm-rg)
   :config
+  (setq helm-rg-thing-at-point nil)
   (setq helm-rg-default-directory 'git-root))
 
 (use-package helm-lsp

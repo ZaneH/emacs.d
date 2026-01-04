@@ -59,5 +59,6 @@
 (load "+casual")
 (load "+literate-calc")
 (load "+zoom")
+(load "+devdocs")
 
 (load "secrets")

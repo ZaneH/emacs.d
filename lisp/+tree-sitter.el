@@ -2,11 +2,11 @@
 
 (use-package nix-ts-mode
   :straight t
-  :defer t
   :mode "\\.nix\\'")
 
 (use-package treesit
   :defer t
+  :after nix-ts-mode
   :ensure nil
   :mode (("\\.tsx\\'" . tsx-ts-mode)
          ("\\.js\\'"  . typescript-ts-mode)

@@ -63,8 +63,8 @@
   ;;; Leader key bindings
   (my/leader
     ;; Top-level bindings
-    "SPC" '(helm-projectile-find-file :which-key "Find file in project")
-    "."   '(helm-find-files :which-key "Find file")
+    "SPC" '(project-find-file :which-key "Find file in project")
+    "."   '(find-file :which-key "Find file")
     ","   '(helm-buffers-list :which-key "Switch buffer")
     "`"   '(evil-switch-to-windows-last-buffer :which-key "Last buffer")
     ";"   '(eval-expression :which-key "Eval expression")
@@ -268,23 +268,6 @@
     "olf" '(gptel-add-file :which-key "Add file to context")
     "ols" '(gptel-send :which-key "Send to gptel")
     
-    ;;; <leader> p --- project
-    "p"   '(:ignore t :which-key "project")
-    "pp"  '(helm-projectile-switch-project :which-key "Switch project")
-    "pf"  '(helm-projectile-find-file :which-key "Find file")
-    "pb"  '(helm-projectile-switch-to-buffer :which-key "Switch buffer")
-    "pr"  '(helm-projectile-recentf :which-key "Recent files")
-    "pd"  '(helm-projectile-find-dir :which-key "Find directory")
-    "pk"  '(projectile-kill-buffers :which-key "Kill buffers")
-    "ps"  '(projectile-save-project-buffers :which-key "Save buffers")
-    "pi"  '(projectile-invalidate-cache :which-key "Invalidate cache")
-    "pc"  '(projectile-compile-project :which-key "Compile")
-    "pC"  '(projectile-configure-project :which-key "Configure")
-    "pt"  '(projectile-test-project :which-key "Test")
-    "pR"  '(projectile-run-project :which-key "Run")
-    "p!"  '(projectile-run-shell-command-in-root :which-key "Run command")
-    "p&"  '(projectile-run-async-shell-command-in-root :which-key "Async command")
-    
     ;;; <leader> q --- quit/session
     "q"   '(:ignore t :which-key "quit/session")
     "qq"  '(save-buffers-kill-terminal :which-key "Quit Emacs")
@@ -297,7 +280,6 @@
     "s"   '(:ignore t :which-key "search")
     "sb"  '(helm-occur :which-key "Search buffer")
     "ss"  '(helm-occur :which-key "Search buffer")
-    "sp"  '(helm-projectile-ag :which-key "Search project")
     "sP"  '(helm-rg :which-key "Search with ripgrep")
     "sd"  '(helm-do-grep-ag :which-key "Search directory")
     "sm"  '(bookmark-jump :which-key "Jump to bookmark")
@@ -401,16 +383,6 @@
    :keymaps 'override
    "C-SPC" #'completion-at-point
    "C-@"   #'completion-at-point)
-
-  ;;; Additional projectile configuration
-  ;; Make projectile use ripgrep/ag for searching
-  (with-eval-after-load 'projectile
-    (setq projectile-enable-caching t
-          projectile-indexing-method 'hybrid  ; Faster for large projects
-          projectile-sort-order 'recentf
-          projectile-globally-ignored-directories
-          (append '(".git" "node_modules" ".cache" "target" "build" "dist")
-                  projectile-globally-ignored-directories)))
 
   (with-eval-after-load 'markdown-mode
     (my/local-leader

@@ -19,7 +19,6 @@
 (load "+copilot")
 (load "+gptel")
 (load "+term")
-(load "+projectile")
 (load "+helm")
 (load "+magit")
 (load "+hl-todo")

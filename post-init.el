@@ -54,5 +54,7 @@
 (load "+pdf-tools")
 (load "+eldoc-box")
 (load "+fancy-compilation")
+(load "+rainbow-delimiters")
+(load "+rainbow-mode")
 
 (load "secrets")

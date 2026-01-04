@@ -4,7 +4,7 @@
   :straight t
   :init
   (require 'eldoc-box)
-  (eldoc-box-hover-at-point-mode +1)
+  (add-hook 'prog-mode-hook #'eldoc-box-hover-at-point-mode)
   :config
   (setq eldoc-box-only-multi-line t)
   (add-hook 'eldoc-box-buffer-setup-hook #'eldoc-box-prettify-ts-errors 0 t)

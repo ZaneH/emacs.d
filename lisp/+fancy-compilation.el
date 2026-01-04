@@ -2,8 +2,6 @@
 
 (use-package fancy-compilation
   :straight t
-  :defer t
-  :commands (fancy-compilation-mode))
-
-(with-eval-after-load 'compile
+  :commands (fancy-compilation-mode)
+  :init
   (fancy-compilation-mode))

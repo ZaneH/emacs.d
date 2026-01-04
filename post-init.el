@@ -56,5 +56,8 @@
 (load "+fancy-compilation")
 (load "+rainbow-delimiters")
 (load "+rainbow-mode")
+(load "+casual")
+(load "+literate-calc")
+(load "+zoom")
 
 (load "secrets")

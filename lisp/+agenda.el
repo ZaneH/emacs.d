@@ -26,6 +26,8 @@
 (use-package org-super-agenda
   :straight t
   :after (org nerd-icons)
+  :hook
+  (org-agenda-mode . olivetti-mode)
   :config
   (setq org-super-agenda-groups '((:name "Personal "
                                          :and(:category "Personal")
@@ -88,7 +90,4 @@
    '(org-agenda-date-today ((t (:inherit diary :height 1.15))))
    '(org-agenda-date-weekend ((t (:inherit outline-2 :height 1.15))))
    '(org-agenda-date-weekend-today ((t (:inherit outline-4 :height 1.15))))
-   '(org-super-agenda-header ((t (:inherit custom-button :weight bold :height 1.05)))))
-
-  ;; Center agenda buffer
-  (add-hook 'org-agenda-mode-hook 'olivetti-mode))
+   '(org-super-agenda-header ((t (:inherit custom-button :weight bold :height 1.05))))))

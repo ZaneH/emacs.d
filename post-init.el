@@ -52,5 +52,7 @@
 (load "+grip")
 (load "+org-cv")
 (load "+pdf-tools")
+(load "+eldoc-box")
+(load "+fancy-compilation")
 
 (load "secrets")

@@ -24,3 +24,6 @@
 
 ;; Smart parenthesis
 (electric-pair-mode 1)
+
+;; Required for self-signed cert (IRC)
+(setq gnutls-verify-error nil)

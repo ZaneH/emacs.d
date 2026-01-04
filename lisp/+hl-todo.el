@@ -2,8 +2,8 @@
 
 (use-package hl-todo
   :straight t
-  :after magit
-  :defer t)
+  ;; :defer t -- Do not defer
+  :after magit)
 
 ;; Enable highlighting in Magit
 (with-eval-after-load 'magit

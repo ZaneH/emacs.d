@@ -230,6 +230,11 @@
     "iy"  '(yank-pop :which-key "From kill ring")
     "is"  '(yas-insert-snippet :which-key "Snippet")
 
+    ;;; <leader> I --- IRC
+    "I"   '(:ignore t :which-key "irc")
+    "Io"  '(circe :which-key "Open Circe")
+    "Ir"  '(circe-reconnect :which-key "Reconnect to server")
+
     ;;; <leader> n --- notes
     "n"   '(:ignore t :which-key "notes")
     "na"  '(org-agenda :which-key "Org agenda")
@@ -279,8 +284,8 @@
     
     ;;; <leader> s --- search
     "s"   '(:ignore t :which-key "search")
-    "sb"  '(helm-occur :which-key "Search buffer")
-    "ss"  '(helm-occur :which-key "Search buffer")
+    "sb"  '(swiper :which-key "Search buffer")
+    "ss"  '(swiper :which-key "Search buffer")
     "sm"  '(bookmark-jump :which-key "Jump to bookmark")
     "sM"  '(bookmark-set :which-key "Set bookmark")
     "sj"  '(evil-show-jumps :which-key "Jump list")

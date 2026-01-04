@@ -254,7 +254,7 @@
     "o"   '(:ignore t :which-key "open")
     "oaa" '(org-agenda :which-key "Agenda")
     "oat" '(org-todo-list :which-key "Todo list")
-    "op"  '(treemacs :which-key "Project sidebar")
+    "op"  '(+my/treemacs-toggle :which-key "Project sidebar")
     "oP"  '(treemacs-find-file :which-key "Find in sidebar")
     "ot"  '(vterm-toggle :which-key "Toggle terminal")
     "oT"  '(vterm :which-key "New terminal")
@@ -612,9 +612,25 @@
     "k" #'org-agenda-prevous-line
     "j" #'org-agenda-next-line)
 
+  ;; Inc/Dec numbers
   (general-define-key
    "M-=" 'evil-numbers/inc-at-pt
    "M--" 'evil-numbers/dec-at-pt))
+
+(defun +my/treemacs-toggle ()
+  "Initialize or toggle treemacs.
+Shows only the current project, removing all others."
+  (interactive)
+  (require 'treemacs)
+  (pcase (treemacs-current-visibility)
+    ('visible
+     (delete-window (treemacs-get-local-window)))
+    (_
+     (let ((project (treemacs--find-current-user-project)))
+       (if (and project (not (file-equal-p project "~")))
+           (treemacs-add-and-display-current-project-exclusively)
+         (message "No valid project in current buffer; opening last treemacs session")
+         (treemacs))))))
 
 (provide '+keybindings)
 ;;; +keybindings.el ends here

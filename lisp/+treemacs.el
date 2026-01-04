@@ -1,12 +1,17 @@
 ;;; +treemacs.el --- Treemacs -*- lexical-binding: t; -*-
 
+(use-package treemacs-nerd-icons
+  :straight t
+  :after (treemacs lsp-treemacs nerd-icons)
+  :config
+  (treemacs-load-theme "nerd-icons"))
+
 (use-package treemacs
   :straight t
   :defer t
   :config
   (setq treemacs-git-executable (executable-find "git"))
   (setq treemacs-python-executable (executable-find "python"))
-
   (setq treemacs-follow-after-init t
         treemacs-recenter-after-file-follow t
         treemacs-width 35
@@ -22,7 +27,6 @@
         treemacs-never-persist nil
         treemacs-is-never-other-window t
         treemacs-user-mode-line-format 'none)
-
   (treemacs-git-mode 'extended)
   (treemacs-hide-gitignored-files-mode t)
   (treemacs-fringe-indicator-mode)

@@ -2,6 +2,7 @@
 
 (use-package hl-todo
   :straight t
+  :after magit
   :defer t)
 
 ;; Enable highlighting in Magit

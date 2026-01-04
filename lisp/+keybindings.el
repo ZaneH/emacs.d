@@ -285,7 +285,7 @@
     ;;; <leader> s --- search
     "s"   '(:ignore t :which-key "search")
     "sb"  '(swiper :which-key "Search buffer")
-    "ss"  '(swiper :which-key "Search buffer")
+    "sB"  '(swiper-all :which-key "Search all open buffers")
     "sm"  '(bookmark-jump :which-key "Jump to bookmark")
     "sM"  '(bookmark-set :which-key "Set bookmark")
     "sj"  '(evil-show-jumps :which-key "Jump list")

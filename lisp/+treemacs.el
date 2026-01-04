@@ -37,13 +37,6 @@
   ;; :defer t -- Do not defer
   :after (treemacs evil))
 
-(use-package treemacs-projectile
-  :straight t
-  :after (treemacs projectile)
-  :defer t
-  :config
-  (setq treemacs-project-follow-mode t))
-
 (use-package treemacs-magit
   :straight t
   :after (treemacs magit)

@@ -17,6 +17,7 @@
 - `gopls`
 - `latex`
 - `python`
+- `lsp-ltex-plus`
 
 ## Preview
 

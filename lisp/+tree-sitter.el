@@ -5,9 +5,8 @@
   :mode "\\.nix\\'")
 
 (use-package treesit
+  :straight (:type built-in)
   :defer t
-  :after nix-ts-mode
-  :ensure nil
   :mode (("\\.tsx\\'" . tsx-ts-mode)
          ("\\.js\\'"  . typescript-ts-mode)
          ("\\.mjs\\'" . typescript-ts-mode)
@@ -47,6 +46,7 @@
                (typescript . ("https://github.com/tree-sitter/tree-sitter-typescript" "v0.20.3" "typescript/src"))
                (yaml . ("https://github.com/ikatyang/tree-sitter-yaml" "v0.5.0"))
                (prisma "https://github.com/victorhqc/tree-sitter-prisma")
+               (nix . ("https://github.com/nix-community/tree-sitter-nix" "v0.3.0"))
                ))
       (add-to-list 'treesit-language-source-alist grammar)
       ;; Only install `grammar' if we don't already have it

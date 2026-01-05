@@ -3,10 +3,8 @@
 (use-package hl-todo
   :straight t
   ;; :defer t -- Do not defer
-  :after magit)
-
-;; Enable highlighting in Magit
-(with-eval-after-load 'magit
+  :after magit
+  :config
   (add-hook 'magit-log-wash-summary-hook
             #'hl-todo-search-and-highlight t)
   (add-hook 'magit-revision-wash-message-hook

@@ -63,5 +63,6 @@
 (load "+circe")
 (load "+swiper")
 ;; (load "+grammar")
+(load "+zig")
 
 (load "secrets")

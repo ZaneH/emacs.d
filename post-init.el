@@ -62,6 +62,6 @@
 (load "+devdocs")
 (load "+circe")
 (load "+swiper")
-(load "+grammar")
+;; (load "+grammar")
 
 (load "secrets")

@@ -222,6 +222,8 @@
 
     ;;; <leader> h --- help
     "h"   '(:ignore t :which-key "help")
+    "hd"   '(devdocs-lookup :which-key "Devdocs lookup")
+    "hD"   '(+my/devdocs-choose :which-key "Devdocs choose")
     
     ;;; <leader> i --- insert
     "i"   '(:ignore t :which-key "insert")

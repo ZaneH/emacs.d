@@ -2,5 +2,8 @@
 
 (use-package devdocs
   :straight t
-  :defer t
-  :bind ("C-h D" . devdocs-lookup))
+  :defer t)
+
+(defun +my/devdocs-choose ()
+  (interactive)
+  (devdocs-lookup t))

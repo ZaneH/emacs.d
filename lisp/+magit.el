@@ -7,6 +7,7 @@
 
 (use-package forge
   :straight t
+  :demand t
   :after magit)
 
 (use-package magit-todos

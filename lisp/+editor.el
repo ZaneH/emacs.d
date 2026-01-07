@@ -28,9 +28,5 @@
 ;; Required for self-signed cert (IRC)
 (setq gnutls-verify-error nil)
 
-;; Improve how scrolling feels
-(setq redisplay-dont-pause t
-  scroll-margin 1
-  scroll-step 1
-  scroll-conservatively 10000
-  scroll-preserve-screen-position 1)
+;; Smooth scrolling
+(pixel-scroll-precision-mode +1)

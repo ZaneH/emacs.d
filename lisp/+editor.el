@@ -25,8 +25,18 @@
 ;; Smart parenthesis
 (electric-pair-mode 1)
 
-;; Required for self-signed cert (IRC)
+;; Required for self-signed cert (for IRC)
 (setq gnutls-verify-error nil)
 
 ;; Smooth scrolling
 (pixel-scroll-precision-mode +1)
+
+;; Keep compilation window at the bottom
+(setq split-height-threshold nil)
+(setq split-width-threshold most-positive-fixnum)
+
+;; Hide Warnings and Compile-Log windows (untested)
+(add-to-list 'display-buffer-alist
+             `(,(rx bos "*" (or "Warnings" "Compile-Log") "*" eos)
+               (display-buffer-no-window)
+               (allow-no-window . t)))

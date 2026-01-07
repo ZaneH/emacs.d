@@ -9,7 +9,8 @@
          ((tsx-ts-mode
            typescript-ts-mode
            js-ts-mode
-           go-ts-mode) . lsp-deferred))
+           go-ts-mode
+           zig-ts-mode) . lsp-deferred))
   :custom
   (lsp-keymap-prefix "C-c l")
   (lsp-completion-provider :none)

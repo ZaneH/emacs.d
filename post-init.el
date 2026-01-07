@@ -8,6 +8,7 @@
 
 (eval-when-compile (require 'use-package))
 
+(load "+envrc")
 (load "+org")
 (load "+agenda")
 (load "+org-modern")
@@ -64,5 +65,6 @@
 (load "+swiper")
 ;; (load "+grammar")
 (load "+zig")
+(load "+ox-typst")
 
 (load "secrets")

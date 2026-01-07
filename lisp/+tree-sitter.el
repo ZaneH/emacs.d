@@ -6,7 +6,7 @@
 
 (use-package treesit
   :straight (:type built-in)
-  :defer t
+  :after (nix-ts-mode zig-ts-mode)
   :mode (("\\.tsx\\'" . tsx-ts-mode)
          ("\\.js\\'"  . typescript-ts-mode)
          ("\\.mjs\\'" . typescript-ts-mode)
@@ -21,6 +21,8 @@
          ("\\.yaml\\'" . yaml-ts-mode)
          ("\\.yml\\'" . yaml-ts-mode)
          ("\\.nix\\'" . nix-ts-mode)
+         ("\\.zig\\'" . zig-ts-mode)
+         ("\\.zon\\'" . zig-ts-mode)
          ;; More modes defined here...
          )
   :preface
@@ -47,6 +49,7 @@
                (yaml . ("https://github.com/ikatyang/tree-sitter-yaml" "v0.5.0"))
                (prisma "https://github.com/victorhqc/tree-sitter-prisma")
                (nix . ("https://github.com/nix-community/tree-sitter-nix" "v0.3.0"))
+               (zig "https://github.com/tree-sitter-grammars/tree-sitter-zig")
                ))
       (add-to-list 'treesit-language-source-alist grammar)
       ;; Only install `grammar' if we don't already have it
@@ -77,7 +80,8 @@
              (sh-mode . bash-ts-mode)
              (sh-base-mode . bash-ts-mode)
              (nix-mode . nix-ts-mode)
-             (yaml-mode . yaml-ts-mode)))
+             (yaml-mode . yaml-ts-mode)
+             (zig-mode . zig-ts-mode)))
     (add-to-list 'major-mode-remap-alist mapping))
   :config
   (os/setup-install-grammars))

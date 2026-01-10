@@ -35,8 +35,8 @@
   (doom-themes-org-config))
 
 ;; This can cause UI glitches (e.g. flickering)
-(use-package solaire-mode
-  :straight t
-  :config
-  (require 'solaire-mode)
-  (solaire-global-mode +1))
+;; (use-package solaire-mode
+;;   :straight t
+;;   :config
+;;   (require 'solaire-mode)
+;;   (solaire-global-mode +1))

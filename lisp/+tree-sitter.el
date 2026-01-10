@@ -23,6 +23,7 @@
          ("\\.nix\\'" . nix-ts-mode)
          ("\\.zig\\'" . zig-ts-mode)
          ("\\.zon\\'" . zig-ts-mode)
+         ("\\.py\\'" . python-ts-mode)
          ;; More modes defined here...
          )
   :preface

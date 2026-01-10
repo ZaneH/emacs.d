@@ -29,7 +29,8 @@
   (general-define-key
    :states '(normal visual motion)
    ;; Smart tab behavior
-   "TAB" 'evil-jump-item
+   "TAB" '+my/toggle-fold
+   "<backtab>" 'hs-show-all
    
    ;; Font scaling
    "C-=" 'text-scale-increase

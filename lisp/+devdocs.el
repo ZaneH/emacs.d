@@ -1,7 +1,9 @@
 ;;; +devdocs.el --- Devdocs -*- lexical-binding: t; -*-
 
 (use-package devdocs
-  :straight t)
+  :straight t
+  :defer t
+  :demand t)
 
 (defun +my/devdocs-choose ()
   (interactive)

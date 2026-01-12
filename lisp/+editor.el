@@ -40,3 +40,7 @@
              `(,(rx bos "*" (or "Warnings" "Compile-Log") "*" eos)
                (display-buffer-no-window)
                (allow-no-window . t)))
+
+;; Enable code-folding in code buffers
+(add-hook 'prog-mode-hook (lambda ()
+                            (hs-minor-mode +1)))

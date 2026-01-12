@@ -15,7 +15,6 @@
   ;; (corfu-preselect 'first)     ; Enable to pre-select the first option
   (corfu-preselect 'prompt)
   (corfu-on-exact-match nil)      ; Don't auto expand tempel snippets
-  ;; Optionally use TAB for cycling, default is `corfu-complete'.
   :bind (:map corfu-map
               ("M-SPC"      . corfu-insert-separator)
               ("TAB"        . corfu-next)
@@ -28,4 +27,4 @@
   :init
   (global-corfu-mode)
   (corfu-history-mode)
-  (corfu-popupinfo-mode)) ; Popup completion info
+  (corfu-popupinfo-mode))

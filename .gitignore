@@ -8,3 +8,5 @@
 !lisp/+*.el
 !post-init.el
 !screenshot.png
+!pre-init.el
+!pre-early-init.el

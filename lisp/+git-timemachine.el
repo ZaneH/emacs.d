@@ -1,8 +1,7 @@
 ;;; +git-timemachine.el --- Git Time Machine -*- lexical-binding: t; -*-
 
 (use-package git-timemachine
-  :straight t
-  :defer t)
+  :straight t)
 
 ;; @see https://emacs.stackexchange.com/questions/9842/disable-evil-mode-when-git-timemachine-mode-is-activated
 (eval-after-load 'git-timemachine
